@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Poppins", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"
+      integrity="sha512-CNgIRecGo7nphbeZ04Sc13ka07paqdeTu0WR1IM4kNcpmBAUSHSQX0FslNhTDadL4O5SAGapGt4FodqL8My0mA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="js/script.js" defer></script>
+    <title>QR ocde Generator</title>
+  </head>
+  <body>
+    <header class="bg-red-500 p-4 mb-10">
+      <div class="max-w-5xl m-auto">
+        <div class="text-xl font-bold text-white">QR Code Generator</div>
+      </div>
+    </header>
+    <div class="container mx-auto">
+      <div class="flex flex-col items-center justify-center h-screen">
+        <div class="flex flex-col items-center justify-center">
+          <h1 class="text-4xl font-bold text-gray-800">QR Code Generator</h1>
+          <p class="text-gray-600">Generate QR code for any text</p>
+        </div>
+        <div class="flex flex-col items-center justify-center mt-8">
+          <input
+            type="text"
+            id="input"
+            class="w-96 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600 focus:border-transparent"
+            placeholder="Enter text to generate QR code"
+          />
+          <button
+            id="generate"
+            class="px-4 py-2 mt-4 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-opacity-50"
+          >
+            Generate
+          </button>
+        </div>
+        <div class="flex flex-col items-center justify-center mt-8">
+          <div id="qrcode"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
